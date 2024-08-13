@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallary Page</title>
+    <link rel="stylesheet" href="gallary.css">
+</head>
+<body>
+
+    <h1>Gallary</h1>
+
+    <div class="full-img" id="fullImgBox">
+        <img src="./Gallary/bird-2295431_1280.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+
+    <div class="img-gallery">
+        <img src="./Gallary/bird-2295431_1280.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/camping-kampcilik-malzemeleri.webp" onclick="openFullImg(this.src)">
+        <img src="./Gallary/camping-kampcilik-nedir.webp" onclick="openFullImg(this.src)">
+        <img src="./Gallary/camping-kampcilik-nerede-yapilir.webp" onclick="openFullImg(this.src)">
+        <img src="./Gallary/christmas-6895856_1280.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/las-vegas-1128811_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/lighthouse-2372461_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/nature-3082832_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/night-4011992_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/plouzane-1758197_1280.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/polynesia-3021072_1920.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/small-fire-butterfly-8224901_1280.jpg" onclick="openFullImg(this.src)">
+        <img src="./Gallary/stint-8238851_1280.jpg" onclick="openFullImg(this.src)">
+        
+    </div>
+    
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>

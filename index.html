@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TRAVELING WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Yaldevi:wght@200&display=swap">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">TRAVEL</a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallary.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Log in</a>
+                <a href="registeration.php">Register</a>
+
+            </div>
+        </div>
+    </header>
+
+    <section class="Home">
+        <video class="video-slide active" src="./resources/rock_-_15527 (1440p).mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./resources/running_-_27539 (1440p).mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./resources/road trp together.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./resources/waterfall - nature.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./resources/city.mp4" autoplay muted loop></video>
+
+        <div class="menu-btn"></div>
+
+
+        <div class="content">
+            <h1>Wonderful.<br><span>Island</span></h1>
+            <p>The world is a beautiful place, surrounded by mysteries and wonders.If you're looking for a place to relax and escape the hustle and bustle of everyday life, consider visiting one of these islands. You won't be disappointed!. Take long walks on the beach, a dip in the fresh seawater, or sit and relax on the beach, soaking the beautiful sun.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>camping.<br><span>Enjoy</span></h1>
+            <p>Camping is a great way to enjoy the outdoors and disconnect from the hustle and bustle of everyday life. It's also a relatively inexpensive activity, making it a great option for families and budget travelers alike. </p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Road Trip.<br><span>Together</span></h1>
+            <p>A road trip with a loved one is a unique and unforgettable experience. It's a chance to bond over shared experiences, explore new places, and create memories that will last a lifetime.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Feel Nature .<br><span>Relax</span></h1>
+            <p>Feeling nature within and relaxing is a wonderful way to reduce stress, improve your mood, and boost your overall well-being. So next time you're feeling stressed or overwhelmed, take some time to connect with nature and let it work its magic.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="content">
+            <h1>Adventures.<br><span>Off Road</span></h1>
+            <p>Off-road adventure is the act of exploring and traversing unpaved roads and trails with a vehicle. It can be a challenging and exhilarating experience, and it's a great way to see some of the most beautiful and remote places on Earth.</p>
+            <a href="#">Read More</a>
+        </div>
+
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+         </div>
+
+         <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            </div>
+
+    </section>
+    
+    <script>
+        //java script for vedio slider navigation
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav = function(manual){
+         btns.forEach((btn) => {
+        btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+        
+
+        btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+        });
+    </script>    
+</body>
